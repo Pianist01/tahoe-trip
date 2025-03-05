@@ -151,7 +151,6 @@ main {
   width: 100%;
   grid-row: 2/3;
   grid-column: 1/4;
-  display: grid;
 }
 
 .lake {
@@ -160,14 +159,199 @@ main {
 }
 
 .search {
-  width: 45%;
-  height: 2%;
+  width: 50%;
+  height: 3%;
   background: none;
   border: 2px solid white;
   grid-row: 1/2;
   margin-top: -37%;
-  margin-left: 28%;
+  margin-left: 26.5%;
   z-index: 10;
   position: absolute;
   border-radius: 15px;
+  display: grid;
+  grid-template-columns: .15fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+.search::before {
+  content: "Food, Views, ...";
+  pointer-events: none;
+  color: lightgrey;
+  margin-left: 5px;
+  font-size: .8rem;
+  align-self: center;
+}
+
+.search-icon {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  height: 15px;
+  width: 15px;
+  justify-self: center;
+  align-self: center;
+}
+
+.options-container {
+  position: absolute;
+  z-index: 10;
+  margin-left: 26.5%;
+  border: none;
+  width: 50%;
+  height: 5%;
+  margin-top: -28%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  gap: 10px;
+}
+
+.option-one {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  text-align: center;
+  background-color: white;
+  display: grid;
+  grid-template-columns: .5fr 1fr;
+  grid-template-rows: 1fr;
+  border-radius: 10px;
+  height: 85%;
+}
+
+.option-one::before {
+  content: "Food";
+  color: black;
+  grid-column: 2/3;
+  grid-row: 1/2;
+  align-self: center;
+  font-size: .9rem;
+}
+
+.food {
+  width: 15px;
+  height: 15px;
+  align-self: center;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  justify-self: center;
+}
+
+.option-two {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  text-align: center;
+  background-color: white;
+  display: grid;
+  grid-template-columns: .5fr 1fr;
+  grid-template-rows: 1fr;
+  border-radius: 10px;
+  height: 85%;
+}
+
+.option-two::before {
+  content: "Hiking";
+  color: black;
+  grid-column: 2/3;
+  grid-row: 1/2;
+  align-self: center;
+  font-size: .9rem;
+}
+
+.hike {
+  width: 15px;
+  height: 15px;
+  align-self: center;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  justify-self: center;
+}
+
+.option-three {
+  grid-column: 3/4;
+  grid-row: 1/2;
+  text-align: center;
+  background-color: white;
+  display: grid;
+  grid-template-columns: .5fr 1fr;
+  grid-template-rows: 1fr;
+  border-radius: 10px;
+  height: 85%;
+}
+
+.option-three::before {
+  content: "Fun";
+  color: black;
+  grid-column: 2/3;
+  grid-row: 1/2;
+  align-self: center;
+  font-size: .9rem;
+}
+
+.fun {
+  width: 20px;
+  height: 20px;
+  align-self: center;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  justify-self: center;
+  margin-left: 50%;
+}
+
+.next-container {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: .2fr 1fr;
+}
+
+.main-title {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  height: 100px;
+  width: 100px;
+  align-self: center;
+  justify-self: center;
+}
+
+.slider-container {
+  width: 300px;
+  overflow: hidden;
+  border: none;
+  border-radius: 15px;
+  justify-self: center;
+}
+
+.slider {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.card {
+  width: 300px;
+    height: 200px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+button {
+  border: none;
+}
+
+.arrow {
+  height: 50px;
+  width: 50px;
+  grid-column: 2/3;
+  grid-row: 1/2;
+  align-self: center;
+  justify-self: center;
 }
