@@ -21,4 +21,5 @@ document.getElementById("prevBtn").addEventListener("click", () => {
 function updateSlider() {
     const offset = -currentIndex * 310; // 300px (card width) + 10px (gap)
     slider.style.transform = `translateX(${offset}px)`;
+    console.log(currentIndex);
 }
