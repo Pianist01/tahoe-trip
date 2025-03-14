@@ -585,6 +585,7 @@ button {
   top: 0;
   background-color: #abab9a;
   border-radius: 15px 15px 0px 0px;
+  z-index: 1;
 }
 
 .home {
@@ -612,4 +613,11 @@ button {
   grid-row: 1/2;
   align-self: center;
   justify-self: center;
+}
+
+.eat-page {
+  grid-column: 1/4;
+  grid-row: 1/4;
+  background-color: blue;
+  z-index: 2;
 }
