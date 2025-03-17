@@ -615,9 +615,17 @@ button {
   justify-self: center;
 }
 
-.eat-page {
+.eat-page, .nature-page, .fun-page, .explore-page, .photo-page {
   grid-column: 1/4;
   grid-row: 1/4;
   background-color: blue;
-  z-index: 2;
+  z-index: 10;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.2s ease-in-out;
+}
+
+.eat-page {
+  display: grid;
+  grid-template-columns: 1fr;
 }
