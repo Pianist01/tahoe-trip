@@ -47,3 +47,15 @@ links.forEach((link, index) => {
         }
     });
 });
+
+const pageExit = document.querySelector('.page-exit');
+pageExit.addEventListener('click', function() {
+    eatPage.style.transform = 'scaleX(0)';
+});
+
+function createFoodContent() {
+    const foodSuggestion = document.createElement('div');
+    foodSuggestion.classList.add('content');
+
+    
+}
