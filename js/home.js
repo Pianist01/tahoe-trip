@@ -53,9 +53,41 @@ pageExit.addEventListener('click', function() {
     eatPage.style.transform = 'scaleX(0)';
 });
 
+const eatPageBody = document.querySelector('.eat-page');
+
 function createFoodContent() {
     const foodSuggestion = document.createElement('div');
     foodSuggestion.classList.add('content');
 
-    
+    const img = document.createElement('img');
+    img.src = '/img/boathouseFood.jpg';
+    img.alt = 'Testing generated content';
+    img.classList.add('boat-food');
+
+    const locationIcon = document.createElement('img');
+    locationIcon.src = '/img/gps.png';
+    locationIcon.alt = 'Gps Icon';
+    locationIcon.classList.add('location-icon');
+
+    const location = document.createElement('p');
+    location.textContent = 'South Lake Tahoe';
+    location.classList.add('location');
+
+    const locationText = document.createElement('p');
+    locationText.textContent = 'Boat House on the Pier';
+    locationText.classList.add('food-name');
+
+    const locationType = document.createElement('p');
+    locationType.textContent = 'Lunch & Dinner';
+    locationType.classList.add('food-type');
+
+    const locationTime = document.createElement('p');
+    locationTime.textContent = '12PM-8PM';
+    locationTime.classList.add('food-time');
+
+    foodSuggestion.append(img, locationIcon, location, locationText, locationType, locationTime);
+
+    eatPageBody.append(foodSuggestion);
 }
+
+createFoodContent();
