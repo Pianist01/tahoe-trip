@@ -55,39 +55,48 @@ pageExit.addEventListener('click', function() {
 
 const eatPageBody = document.querySelector('.eat-page');
 
+let counter = 0;
+
 function createFoodContent() {
     const foodSuggestion = document.createElement('div');
-    foodSuggestion.classList.add('content');
+    foodSuggestion.classList.add(`content${counter}`);
 
     const img = document.createElement('img');
     img.src = '/img/boathouseFood.jpg';
     img.alt = 'Testing generated content';
-    img.classList.add('boat-food');
+    img.classList.add(`boat-food${counter}`);
 
     const locationIcon = document.createElement('img');
     locationIcon.src = '/img/gps.png';
     locationIcon.alt = 'Gps Icon';
-    locationIcon.classList.add('location-icon');
+    locationIcon.classList.add(`location-icon${counter}`);
 
     const location = document.createElement('p');
     location.textContent = 'South Lake Tahoe';
-    location.classList.add('location');
+    location.classList.add(`location${counter}`);
 
     const locationText = document.createElement('p');
     locationText.textContent = 'Boat House on the Pier';
-    locationText.classList.add('food-name');
+    locationText.classList.add(`food-name${counter}`);
 
     const locationType = document.createElement('p');
     locationType.textContent = 'Lunch & Dinner';
-    locationType.classList.add('food-type');
+    locationType.classList.add(`food-type${counter}`);
 
     const locationTime = document.createElement('p');
     locationTime.textContent = '12PM-8PM';
-    locationTime.classList.add('food-time');
+    locationTime.classList.add(`food-time${counter}`);
 
     foodSuggestion.append(img, locationIcon, location, locationText, locationType, locationTime);
 
     eatPageBody.append(foodSuggestion);
 }
 
-createFoodContent();
+function initialContent() {
+    for(let i = 0; i <= 2; i++) {
+        counter++;
+        createFoodContent()
+    }
+}
+
+initialContent();
